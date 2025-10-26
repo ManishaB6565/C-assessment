@@ -1,0 +1,21 @@
+#include <stdio.h>
+int remove_zero(int n){
+  int result=0,temp=1;
+  while(n>0){
+    int digit=n%10;
+    if(digit!=0){
+      result+=digit*temp;
+      temp*=10;
+    }
+    n=n/10;
+  }
+  return result;
+}
+
+int main(){
+  int n,new;
+  scanf("%d",&n);
+  new=remove_zero(n);
+  printf("%d",new);
+return 0;
+}
