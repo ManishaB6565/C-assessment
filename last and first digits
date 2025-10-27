@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main(){
+ int n,last,first;
+ scanf("%d",&n);
+ last=n%10;
+ first=n/10;
+ printf("%d\n%d",last,first);
+ return 0;
+}
