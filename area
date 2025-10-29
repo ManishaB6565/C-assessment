@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+  int l,w,s,h,b,area_sqr,are_rec,are_tri,are_circle;
+  float r;
+  scanf("%d\n%d\n%d\n%d",&l,&w,&s,&h,&b);
+  scanf("%f",&r);
+  area_sqr=s*s;
+  are_rec=l*w;
+  are_circle=3.14*r*r;
+  are_tri=1/2*h*b;
+  printf("%d\n%d\n%d\n",area_sqr,are_rec,are_tri);
+ printf("%.2f\n",are_circle);
+  return 0;
+}
