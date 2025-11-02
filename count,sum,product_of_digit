@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int num, digit;
+    int count = 0;
+    int sum = 0;
+    int product = 1;
+    int temp;
+    scanf("%d", &num);
+    if (num < 0)
+        num = -num;
+    temp=num;
+    if (num == 0) {
+        count = 1;
+        sum = 0;
+        product = 0;
+    } else {
+        while (num > 0) {
+            digit = num % 10;     
+            sum += digit;         
+            product *= digit;     
+            count++;              
+            num /= 10;           
+        }
+    }
+
+    printf("%d\n", temp);
+    printf("%d\n", count);
+    printf("%d\n", sum);
+    printf("%d\n", product);
+    return 0;
+}
