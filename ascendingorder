@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+    int num, temp;
+    int lastDigit, nextDigit;
+    int isAscending = 1;  
+    scanf("%d", &num);
+    temp = num;
+    while (temp >= 10) {
+        lastDigit = temp % 10;
+        temp = temp / 10;
+        nextDigit = temp % 10;
+        if (nextDigit > lastDigit) {
+            isAscending = 0;
+            break;
+        }
+    }
+    if (isAscending)
+        printf("The digits of %d are in ascending order.\n", num);
+    else
+        printf("The digits of %d are NOT in ascending order.\n", num);
+    return 0;
+}
